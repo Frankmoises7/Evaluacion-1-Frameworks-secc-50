@@ -26,7 +26,8 @@ Route::get('/', function () {
 //});
 
 Route::get('/articulos', function() {
-    return view('articulos');
+    return view('list');
 });
 
 Route::get('/list', 'App\Http\Controllers\ArticulosDeLibreriaController@verlista');
+Route::post('/listGuardar', 'App\Http\Controllers\ArticulosDeLibreriaController@guardar');
