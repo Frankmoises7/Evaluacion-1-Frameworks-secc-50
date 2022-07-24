@@ -17,14 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/list', function () {
-    return view('list');
-});
+//Route::get('/list', function () {
+//    return view('list');
+//});
 
-Route::get('/hola', function () {
-    return view('hola');
-});
+//Route::get('/hola', function () {
+//    return view('hola');
+//});
 
 Route::get('/articulos', function() {
     return view('articulos');
 });
+
+Route::get('/list', 'App\Http\Controllers\ArticulosDeLibreriaController@verlista');
