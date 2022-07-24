@@ -12,8 +12,9 @@
 
 <body>
     @section('header')
-        <h2>Cabecera</h2>
-        <hr>
+        <div class="header">
+            <h2 class="header-title">Libreria</h2>
+        </div>
     @show
 
     <div class="container">
@@ -21,8 +22,10 @@
     </div>
 
     @section('footer')
-        <hr>
-        <h3>Footer aquí</h3>
+        <div class="footer">
+            <h3 class="footer-content">Avenida 1234, Ciudad, Chile</h3>
+        </div>
+
     @show
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
