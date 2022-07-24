@@ -20,7 +20,7 @@
 
     @section('footer')
         <hr>
-        <h3>Footer</h3>
+        <h3>Footer aquí</h3>
     @show
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
