@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
+/*paleta de colores
+    1. azul oscuro = #1a4878
+    2. celeste claro = #cbf4f6
+    3. fondo footer y header = #556980
+    4. fondo formulario = #afcde3
+*/
+
 body,
 html {
     width: 100%;
@@ -19,8 +26,8 @@ html {
 
 .header,
 .footer {
-    background-color: #415a77;
-    color: #dffdff;
+    background-color: #556980;
+    color: #cbf4f6;
     font-family: "Roboto", sans-serif;
 }
 .header {
@@ -30,16 +37,31 @@ html {
 .header-title {
     font-weight: 900;
     font-size: 50px;
+    text-transform: uppercase;
 }
 
 .style-form {
-    background-color: #90bede;
-    padding: 30px;
+    padding: 35px;
     font-family: "Roboto", sans-serif;
+    background-color: #afcde3;
+    border-radius: 12px;
+    border: 1px solid #cbf4f6;
+    -webkit-box-shadow: 15px 18px 40px -2px rgba(228, 235, 237, 1);
+    -moz-box-shadow: 15px 18px 40px -2px rgba(228, 235, 237, 1);
+    box-shadow: 15px 18px 40px -2px rgba(228, 235, 237, 1);
 }
 
-.btn-color {
-    background-color:white;
+.form-title {
+    font-weight: 900;
+    font-size: 22px;
+    color: #1a4878;
+    text-transform: uppercase;
+}
+
+.a-link {
+    text-decoration: none;
+    color: #1a4878;
+    font-weight: 700;
 }
 
 .footer {
