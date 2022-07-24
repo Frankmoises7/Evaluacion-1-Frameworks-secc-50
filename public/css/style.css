@@ -58,6 +58,22 @@ html {
     text-transform: uppercase;
 }
 
+.table-title {
+    text-transform: uppercase;
+}
+
+.table-title, .add-element {
+    font-weight:700;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #1a4878;
+}
+
+.table, .table-title, .add-element {
+    font-family: "Roboto", sans-serif;
+}
+
 .a-link {
     text-decoration: none;
     color: #1a4878;
