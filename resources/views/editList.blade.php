@@ -50,7 +50,7 @@
 
     ?>
     <div class="container flex-column">
-        <h2 class="table-title">Listado de Productos</h2>
+        <h2 class="table-title">Stock de Productos</h2>
         <table class="table">
             <thead>
                 <tr class="table-info">
@@ -58,6 +58,8 @@
                     <th scope="col">NOMBRE</th>
                     <th scope="col">STOCK</th>
                     <th scope="col">SUCURSAL</th>
+                    <th scope="col">MENOS</th>
+                    <th scope="col">MÁS</th>
                 </tr>
             </thead>
             <?php
@@ -70,6 +72,8 @@
                     <td><?php echo $p['nombre']; ?></td>
                     <td><?php echo $p['stock']; ?></td>
                     <td><?php echo $p['sucursal']; ?></td>
+                    <td><button type="button" class="btn btn-danger">-</button></td>
+                    <td><button type="button" class="btn btn-primary">+</button></td>
                 </tr>
             </tbody>
 
@@ -79,44 +83,8 @@
         ?>
         </table>
         <div>
-            <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/editList')}}" class="a-link">Modificar Stock</a></button>
-        </div>
-
-        <div class="add-element">
-            <h2 class="table-title">Agregar Productos Nuevos</h2>
-            <form method="POST" action="{{ url('/listGuardar') }}">
-                <table>
-                    <td>
-                        <div class="input-group mb-3 input-group-lg">
-                            <span class="input-group-text">Sucursal</span>
-                            <select class="form-select" id="sucursal" name="sucursal">
-                                <option selected>Selecciona sucursal</option>
-                                <option value="Arica">Arica</option>
-                                <option value="Santiago">Santiago</option>
-                                <option value="Punta Arenas">Punta Arenas</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group mb-3 input-group-lg">
-                            <span class="input-group-text">Articulo</span>
-                            <input type="text" class="form-control" placeholder="Agendas" id="producto" name="articulo">
-                        </div>
-
-                    </td>
-                    <td>
-                        <div class="input-group mb-3 input-group-lg">
-                            <span class="input-group-text">Cantidad</span>
-                            <input type="number" class="form-control" placeholder="30" id="cantidad" name="cantidad">
-                        </div>
-                    </td>
-                </table>
-                <div>
-                    <button type="submit" class="btn btn-primary btn-lg">Agregar</button>
-                </div>
-
-            </form>
-
+            <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/list')}}" class="a-link">Regresar</a></button>
+            <button type="button" class="btn btn-success btn-lg">Actualizar</button>
         </div>
 
     </div>
