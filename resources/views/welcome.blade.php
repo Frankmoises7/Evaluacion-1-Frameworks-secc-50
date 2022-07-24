@@ -1,11 +1,5 @@
 @extends('layouts.master')
 
-{{-- <style>
-    form{
-        background-color:rgb(189, 189, 189);
-    }
-</style> --}}
-
 @section('content')
 <form class="style-form">
     <h3 class="form-title mb-3">Ingresa a tu cuenta</h3>
