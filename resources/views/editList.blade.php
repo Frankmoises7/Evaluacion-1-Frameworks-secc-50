@@ -60,6 +60,7 @@
                     <th scope="col">SUCURSAL</th>
                     <th scope="col">MENOS</th>
                     <th scope="col">MÁS</th>
+                    <th scope="col">DAR DE BAJA</th>
                 </tr>
             </thead>
             <?php
@@ -74,6 +75,7 @@
                     <td><?php echo $p['sucursal']; ?></td>
                     <td><button type="button" class="btn btn-danger">-</button></td>
                     <td><button type="button" class="btn btn-primary">+</button></td>
+                    <td><button type="button" class="btn btn-info"><a href="{{url('/delete')}}" class="a-link">ELIMINAR</a></button></td>
                 </tr>
             </tbody>
 

@@ -31,3 +31,4 @@ Route::get('/articulos', function() {
 
 Route::get('/list', 'App\Http\Controllers\ArticulosDeLibreriaController@verlista');
 Route::post('/listGuardar', 'App\Http\Controllers\ArticulosDeLibreriaController@guardar');
+Route::get('/delete', 'App\Http\Controllers\ArticulosDeLibreriaController@verdelete');
