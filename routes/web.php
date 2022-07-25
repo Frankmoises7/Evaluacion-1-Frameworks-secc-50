@@ -13,22 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/editList', function () {
-   return view('editList');
-});
-
-//Route::get('/hola', function () {
-//    return view('hola');
-//});
-
-Route::get('/articulos', function() {
-    return view('list');
-});
-
+Route::get('/', 'App\Http\Controllers\ArticulosDeLibreriaController@welcome');
 Route::get('/list', 'App\Http\Controllers\ArticulosDeLibreriaController@verlista');
+Route::get('/editList', 'App\Http\Controllers\ArticulosDeLibreriaController@editList');
+
 Route::post('/listGuardar', 'App\Http\Controllers\ArticulosDeLibreriaController@guardar');
+
+//Para mostrar la vista DELETE (se modificara el metodo en proximas actualizaciones)
 Route::get('/delete', 'App\Http\Controllers\ArticulosDeLibreriaController@verdelete');

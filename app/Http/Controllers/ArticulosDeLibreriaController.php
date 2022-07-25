@@ -6,12 +6,20 @@ use Illuminate\Http\Request;
 
 class ArticulosDeLibreriaController extends Controller
 {
+    public function welcome(){
+        return view('welcome');
+    }
+    
     public function verlista(){
         return view('list');
     }
 
     public function verdelete(){
         return view('delete');
+    }
+
+    public function editList() {
+        return view('editList');
     }
 
     public function guardar(Request $request) {
