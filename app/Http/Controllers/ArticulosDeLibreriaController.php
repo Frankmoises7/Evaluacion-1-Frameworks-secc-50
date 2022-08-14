@@ -12,8 +12,8 @@ use App\Models\Sucursales;
 class ArticulosDeLibreriaController extends Controller
 {
     public function welcome(){
-       // return view('welcome');
-       $articulos = Articulos::get();
+       return view('welcome');
+       //$articulos = Articulos::get();
 
        dd($articulos);
     }
