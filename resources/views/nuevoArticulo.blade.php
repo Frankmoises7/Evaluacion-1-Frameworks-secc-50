@@ -6,7 +6,7 @@
             <form method="POST" action="{{ url('/guardarIt') }}">
                 <table>
 
-                     <td>
+                    <td>
                         <div class="input-group mb-3 input-group-lg">
                             <span class="input-group-text">Código</span>
                             <input type="number" class="form-control" placeholder="1" id="code" name="code">
