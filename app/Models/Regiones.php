@@ -12,6 +12,6 @@ class Region extends Model
     protected $table = 'regiones';
 
     public function assignItems(){
-        return $this->hasMany('App\Models\sucursales');
+        return $this->hasMany('App\Models\sucursal');
     }
 }

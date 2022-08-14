@@ -12,6 +12,6 @@ class Categoria extends Model
     protected $table = 'categorias';
 
     public function articulos(){
-        return $this->hasMany('App\Models\articulos');
+        return $this->hasMany('App\Models\articulo');
     }
 }
