@@ -13,7 +13,9 @@
 <body>
     @section('header')
         <div class="header">
-            <h2 class="header-title">Libreria</h2>
+            <a href="{{url('/list')}}">
+                <h2 class="header-title">Libreria</h2>
+            </a>
         </div>
     @show
 

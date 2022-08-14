@@ -19,7 +19,7 @@
                     <td>
                         <div class="input-group mb-3 input-group-lg">
                             <span class="input-group-text">Artículo</span>
-                            <select class="form-select" id="selectitem" name="selectitem">
+                            <select class="form-select" id="articulo" name="articulo">
                                 <option selected>Selecciona artículo</option>
                                 <option value="lapiz">Lápiz</option>
                                 <option value="goma">Goma</option>

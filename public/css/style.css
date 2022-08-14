@@ -80,6 +80,13 @@ html {
     font-weight: 700;
 }
 
+a:link, a:visited,  a:hover, a:active {
+    text-decoration: none;
+    color: #1a4878;
+    font-weight: 700
+}
+
+
 .footer {
     padding: 10px;
 }
@@ -89,4 +96,9 @@ html {
     font-size: 15px;
     padding-top: 5px;
     text-align: center;
+}
+
+.boton__agregar__newoffice{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

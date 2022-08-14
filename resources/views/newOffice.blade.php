@@ -5,13 +5,13 @@
             <h2 class="table-title">Agregar Nueva Sucursal</h2>
             <form method="POST" action="{{ url('/guardarOf') }}">
                 <table>
-                     <div class="form-group">
+                    <div class="form-group">
                         <label for="full_name_id" class="control-label">Nombre</label>
                         <input type="text" class="form-control" id="nameOffice" name="nameOffice" placeholder="Sucursal Santiago">
                     </div>    
                     <div class="form-group"> 
                         <label for="street1_id" class="control-label">Dirección</label>
-                     <input type="text" class="form-control" id="address" name="address" placeholder="Calle falsa">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Calle falsa">
                     </div> 
 
                     <div class="form-group"> 
@@ -37,7 +37,7 @@
 
                 </table>
                 <div>
-                    <button type="submit" class="btn btn-primary btn-lg">Agregar</button>
+                    <button type="submit" class="btn btn-primary btn-lg boton__agregar__newoffice">Agregar</button>
                 </div>
 
                 @if($errors->any())
