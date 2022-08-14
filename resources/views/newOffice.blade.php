@@ -17,21 +17,22 @@
                     <div class="form-group"> 
                     <label for="region" class="control-label">Región</label>
                     <select class="form-control" id="region">
-                        <option value="AL">Arica y Parinacota</option>
-                        <option value="AK">Tarapacá</option>
-                        <option value="AZ">Antofagasta</option>
-                        <option value="AR">Atacama</option>
-                        <option value="CA">Coquimbo</option>
-                        <option value="CO">Valparaiso</option>
-                        <option value="CT">Metropolitana</option>
-                        <option value="DE">Libertador General Bernardo O'Higgins</option>
-                        <option value="DC">Maule</option>
-                        <option value="FL">Biobío</option>
-                        <option value="GA">La Araucanía</option>
-                        <option value="HI">Los Ríos</option>
-                        <option value="ID">Los Lagos</option>
-                        <option value="IL">Aysén del General Carlos Ibáñez del Campo</option>
-                        <option value="IN">Magallanes y de la Antártica Chilena</option>          
+                        <option value="15">Arica y Parinacota</option>
+                        <option value="1">Tarapacá</option>
+                        <option value="2">Antofagasta</option>
+                        <option value="3">Atacama</option>
+                        <option value="4">Coquimbo</option>
+                        <option value="5">Valparaiso</option>
+                        <option value="13">Metropolitana</option>
+                        <option value="6">Libertador General Bernardo O'Higgins</option>
+                        <option value="7">Maule</option>
+                        <option value="8">Biobío</option>
+                        <option value="9">La Araucanía</option>
+                        <option value="14">Los Ríos</option>
+                        <option value="10">Los Lagos</option>
+                        <option value="11">Aysén del General Carlos Ibáñez del Campo</option>
+                        <option value="12">Magallanes y de la Antártica Chilena</option>          
+                        <option value="16">Ñuble</option>          
                     </select>                    
                 </div>
 
