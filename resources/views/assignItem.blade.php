@@ -36,13 +36,23 @@
                     <td>
                         <div class="input-group mb-3 input-group-lg">
                             <span class="input-group-text">Precio Unidad</span>
-                            <input type="number" class="form-control" placeholder="30" id="preciosucursal" name="preciosucursal">
+                            <input type="number" class="form-control" placeholder="30" id="preciounidad" name="preciounidad">
                         </div>
                     </td>
                 </table>
                 <div>
                     <button type="submit" class="btn btn-primary btn-lg">Agregar</button>
                 </div>
+
+                @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
 
             </form>
 

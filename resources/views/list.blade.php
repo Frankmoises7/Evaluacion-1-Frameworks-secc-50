@@ -93,6 +93,7 @@
         <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/assignItem')}}" class="a-link">Asignar un artículo a sucursal</a></button>
         <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/editList')}}" class="a-link">Actualizar Productos</a></button>
         <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/newItem')}}" class="a-link">Agregar nuevo artículo</a></button>
+        <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/newOffice')}}" class="a-link">Agregar nueva Sucursal</a></button>
         
 </div>
 
