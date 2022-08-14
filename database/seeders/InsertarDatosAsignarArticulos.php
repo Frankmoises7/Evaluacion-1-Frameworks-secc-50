@@ -56,7 +56,7 @@ class InsertarDatosAsignarArticulos extends Seeder
             [
                 'articulo_id' => 11,
                 'sucursal_id' => 1,
-                'stockSucursal' => 300,                  
+                'stockSucursal' => 301,                  
                 'precio' => 200,
             ],
             [
