@@ -38,7 +38,7 @@
                             <span class="input-group-text">Precio Unidad</span>
                             <input type="number" class="form-control" placeholder="30" id="preciounidad" name="preciounidad">
                         </div>
-                    </td>
+                    </td>                   
                 </table>
                 <div>
                     <button type="submit" class="btn btn-primary btn-lg">Agregar</button>

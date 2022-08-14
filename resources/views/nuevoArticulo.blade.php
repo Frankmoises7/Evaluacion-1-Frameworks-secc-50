@@ -6,6 +6,13 @@
             <form method="POST" action="{{ url('/guardarIt') }}">
                 <table>
 
+                     <td>
+                        <div class="input-group mb-3 input-group-lg">
+                            <span class="input-group-text">Código</span>
+                            <input type="number" class="form-control" placeholder="1" id="code" name="code">
+                        </div>
+                    </td>
+
                     <td>
                         <div class="input-group mb-3 input-group-lg">
                             <span class="input-group-text">Nombre producto</span>
@@ -28,6 +35,14 @@
                                 <option value="Adhesivos">Adhesivos</option>
                                 <option value="Cuadernos y Libretas">Cuadernos y Libretas</option>
                             </select>
+                        </div>
+                    </td>
+                    <td>
+                    <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon">Descripción</span>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
+                            </div>
                         </div>
                     </td>
                 </table>
