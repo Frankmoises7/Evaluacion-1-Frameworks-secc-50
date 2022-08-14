@@ -15,7 +15,7 @@ class ArticulosDeLibreriaController extends Controller
        return view('welcome');
        //$articulos = Articulos::get();
 
-       dd($articulos);
+       //dd($articulos);
     }
     
     public function verlista(){

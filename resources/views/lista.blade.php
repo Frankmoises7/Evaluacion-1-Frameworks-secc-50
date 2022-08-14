@@ -90,10 +90,10 @@
         </table>
 
         <div class="d-grid gap-2 d-md-block">
-        <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/asignarArticulo')}}" class="a-link">Asignar un artículo a sucursal</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/editarLista')}}" class="a-link">Actualizar Productos</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/nuevoArticulo')}}" class="a-link">Agregar nuevo artículo</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/nuevaSucursal')}}" class="a-link">Agregar nueva Sucursal</a></button>
+        <button type="button" class="btn btn-secondary btn-lg"><a href="asignarArticulo">Asignar un artículo a sucursal</a></button>
+        <button type="button" class="btn btn-secondary btn-lg"><a href="editarLista">Actualizar Productos</a></button>
+        <button type="button" class="btn btn-secondary btn-lg"><a href="nuevoArticulo">Agregar nuevo artículo</a></button>
+        <button type="button" class="btn btn-secondary btn-lg"><a href="nuevaSucursal">Agregar nueva Sucursal</a></button>
         
 </div>
 

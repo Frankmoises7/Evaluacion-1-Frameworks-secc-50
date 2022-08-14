@@ -12,7 +12,7 @@ class Sucursal extends Model
     protected $table = 'sucursales';
 
     public function asignarArticulos(){
-        return $this->hasMany('App\Models\AsignarArticulos');
+        return $this->hasMany('App\Models\AsignarArticulo');
     }
     public function regiones(){
         return $this->belongsTo('App\Models\office', 'regiones_id');       

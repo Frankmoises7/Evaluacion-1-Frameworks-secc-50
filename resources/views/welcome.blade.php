@@ -11,7 +11,7 @@
         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
     </div>
-    <button type="submit" class="btn btn-light mt-3"><a href="{{url('/lista')}}" class="a-link">Entrar</a></button>
+    <button type="submit" class="btn btn-light mt-3"><a href="lista">Entrar</a></button>
 </form>
 @stop
 
