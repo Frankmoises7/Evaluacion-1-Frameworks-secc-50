@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\ArticulosDeLibreriaController@welcome');
-Route::get('/list', 'App\Http\Controllers\ArticulosDeLibreriaController@verlista');
-Route::get('/editList', 'App\Http\Controllers\ArticulosDeLibreriaController@editList');
-Route::get('/assignItem', 'App\Http\Controllers\ArticulosDeLibreriaController@assignIt');
-Route::get('/newItem', 'App\Http\Controllers\ArticulosDeLibreriaController@newIt');
-Route::get('/newOffice', 'App\Http\Controllers\ArticulosDeLibreriaController@newOf');
+Route::get('/lista', 'App\Http\Controllers\ArticulosDeLibreriaController@verlista');
+Route::get('/editarLista', 'App\Http\Controllers\ArticulosDeLibreriaController@editarLista');
+Route::get('/asignarArticulo', 'App\Http\Controllers\ArticulosDeLibreriaController@asignarAr');
+Route::get('/nuevoArticulo', 'App\Http\Controllers\ArticulosDeLibreriaController@nuevoAr');
+Route::get('/nuevaSucursal', 'App\Http\Controllers\ArticulosDeLibreriaController@nuevaSu');
 
 Route::post('/listGuardar', 'App\Http\Controllers\ArticulosDeLibreriaController@guardar');
 Route::post('/guardarIt', 'App\Http\Controllers\ArticulosDeLibreriaController@guardarItem');
 Route::post('/guardarOf', 'App\Http\Controllers\ArticulosDeLibreriaController@guardarOffice');
 
 //Para mostrar la vista DELETE (se modificara el metodo en proximas actualizaciones)
-Route::get('/delete', 'App\Http\Controllers\ArticulosDeLibreriaController@verdelete');
+Route::get('/borrar', 'App\Http\Controllers\ArticulosDeLibreriaController@verborrar');
