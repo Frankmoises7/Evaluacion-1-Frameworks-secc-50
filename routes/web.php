@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\ArticulosDeLibreriaController@welcome');
 Route::get('/list', 'App\Http\Controllers\ArticulosDeLibreriaController@verlista');
 Route::get('/editList', 'App\Http\Controllers\ArticulosDeLibreriaController@editList');
+Route::get('/assignItem', 'App\Http\Controllers\ArticulosDeLibreriaController@assignIt');
+Route::get('/newItem', 'App\Http\Controllers\ArticulosDeLibreriaController@newIt');
 
 Route::post('/listGuardar', 'App\Http\Controllers\ArticulosDeLibreriaController@guardar');
+Route::post('/guardarIt', 'App\Http\Controllers\ArticulosDeLibreriaController@guardarItem');
 
 //Para mostrar la vista DELETE (se modificara el metodo en proximas actualizaciones)
 Route::get('/delete', 'App\Http\Controllers\ArticulosDeLibreriaController@verdelete');
