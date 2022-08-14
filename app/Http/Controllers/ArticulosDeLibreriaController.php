@@ -30,12 +30,36 @@ class ArticulosDeLibreriaController extends Controller
         return view('newItem');
     }
 
-    public function guardar(Request $request) {
-        return "Sucursal: ". $request->input("sucursal"). ", Nombre del articulo: ". $request->input("articulo"). ", Cantidad del articulo: ". $request->input("cantidad"). ", Precio Unidad: ". $request->input("preciosucursal");
+    public function newOf() {
+        return view('newOffice');
     }
 
-    public function guardaritem(Request $request) {
+    public function guardar(Request $request) {
+
+        $this->validate($request,[
+            'cantidad' => 'required|integer',
+            'preciounidad' => 'required|integer'
+        ]);
+
+        return "Sucursal: ". $request->input("sucursal"). ", Nombre del articulo: ". $request->input("articulo"). ", Cantidad del articulo: ". $request->input("cantidad"). ", Precio Unidad: ". $request->input("preciounidad");
+    }
+
+    public function guardarItem(Request $request) {
+        
+        $this->validate($request,[
+            'item' => 'required|min:3',
+            'stock' => 'required|integer'
+        ]);
         return "Nombre del articulo: ". $request->input("item"). ", Cantidad del articulo: ". $request->input("stock"). ", Categoria: ". $request->input("category");
+    }
+
+    public function guardarOffice(Request $request) {
+        
+        $this->validate($request,[
+            'nameOffice' => 'required|min:3',
+            'address' => 'required|min: 3'
+        ]);
+        return "Nombre de Sucursal: ". $request->input("nameOffice"). ", Dirección: ". $request->input("address");
     }
 
 }

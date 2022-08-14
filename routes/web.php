@@ -18,9 +18,11 @@ Route::get('/list', 'App\Http\Controllers\ArticulosDeLibreriaController@verlista
 Route::get('/editList', 'App\Http\Controllers\ArticulosDeLibreriaController@editList');
 Route::get('/assignItem', 'App\Http\Controllers\ArticulosDeLibreriaController@assignIt');
 Route::get('/newItem', 'App\Http\Controllers\ArticulosDeLibreriaController@newIt');
+Route::get('/newOffice', 'App\Http\Controllers\ArticulosDeLibreriaController@newOf');
 
 Route::post('/listGuardar', 'App\Http\Controllers\ArticulosDeLibreriaController@guardar');
 Route::post('/guardarIt', 'App\Http\Controllers\ArticulosDeLibreriaController@guardarItem');
+Route::post('/guardarOf', 'App\Http\Controllers\ArticulosDeLibreriaController@guardarOffice');
 
 //Para mostrar la vista DELETE (se modificara el metodo en proximas actualizaciones)
 Route::get('/delete', 'App\Http\Controllers\ArticulosDeLibreriaController@verdelete');
