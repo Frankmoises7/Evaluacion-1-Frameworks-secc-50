@@ -11,27 +11,27 @@ class ArticulosDeLibreriaController extends Controller
     }
     
     public function verlista(){
-        return view('list');
+        return view('lista');
     }
 
-    public function verdelete(){
-        return view('delete');
+    public function verborrar(){
+        return view('borrar');
     }
 
-    public function editList() {
-        return view('editList');
+    public function editarLista() {
+        return view('editarLista');
     }
 
-    public function assignit() {
-        return view('assignItem');
+    public function asignarAr() {
+        return view('asignarArticulo');
     }
 
-    public function newit() {
-        return view('newItem');
+    public function nuevoAr() {
+        return view('nuevoArticulo');
     }
 
-    public function newOf() {
-        return view('newOffice');
+    public function nuevaSu() {
+        return view('nuevaSucursal');
     }
 
     public function guardar(Request $request) {
