@@ -16,59 +16,67 @@ class InsertarDatosArticulos extends Seeder
     public function run()
     {
         //Insertando datos de Articulos
-        DB::table('articulos')->insert(array(
+        DB::table('articulos')-> insert(array(
             [
+                'codigo' => '1',
                 'nombre' => 'Lápiz Mina',
-                'stock' => 300,
-                'precio' => '100',
-                'sucursal_id' => 1
+                'categoria_id' => 1,
+                'stock' => 10000,                  
+                'descripcion' => 'Lápiz de grafito hecho por esclavos enanos en las montañas'
             ],
     
             [
-                'nombre' => 'Cuaderno',
-                'stock' => 100,
-                'precio' => '400',
-                'sucursal_id' => 2
+                'codigo' => '2',
+                'nombre' => 'Cuaderno universitario',
+                'category_id' => 1,
+                'stock' => 10000,                  
+                'descripcion' => 'Cuaderno de 100 hojas con un macaco en la portada'
             ],
     
             [
+                'codigo' => '3',
+                'nombre' => 'Corrector',
+                'categoria_id' => 1,
+                'stock' => 9000,                  
+                'descripcion' => 'Lápiz corrector de equivocaciones, no puedes corregirte con él'
+            ],
+            [
+                'codigo' => '4',
+                'nombre' => 'Marcadores Multicolores',
+                'categoria_id' => 1,
+                'stock' => 10000,                  
+                'descripcion' => 'Marcadores de 3cm x 10 cm de muchos colores'
+            ],
+            [
+                'codigo' => '5',
+                'nombre' => 'Cola Fría',
+                'categoria_id' => 2,
+                'stock' => 8000,                  
+                'descripcion' => 'Pegamento para maderas, papel y huesos'
+            ],
+            [
+                'codigo' => '6',
                 'nombre' => 'Tijeras',
-                'stock' => 200,
-                'precio' => '300',
-                'sucursal_id' => 1
+                'categoria_id' => 1,
+                'stock' => 7000,                  
+                'descripcion' => 'Tijeras sin filo, para preescolar'
             ],
             [
+                'codigo' => '7',
                 'nombre' => 'Cartulina',
-                'stock' => 400,
-                'precio' => '150',
-                'sucursal_id' => 2
+                'categoria_id' => 3,
+                'stock' => 7000,                  
+                'descripcion' => 'Cartulinas vario color para disertaciones a última hora'
             ],
             [
-                'nombre' => 'Destacadores',
-                'stock' => 300,
-                'precio' => '300',
-                'sucursal_id' => 1
+                'codigo' => '8',
+                'nombre' => 'Témpera',
+                'categoria_id' => 4,
+                'stock' => 5000,                  
+                'descripcion' => 'Temperas de 12 colores, si las mezclas creas el mejor color'
             ],
-            [
-                'nombre' => 'Agendas',
-                'stock' => 100,
-                'precio' => '800',
-                'sucursal_id' => 1
-            ],
-            [
-                'nombre' => 'Lapiceras',
-                'stock' => 300,
-                'precio' => '200',
-                'sucursal_id' => 2
-            ],
-            [
-                'nombre' => 'Glitters',
-                'stock' => 50,
-                'precio' => '500',
-                'sucursal_id' => 2
-            ]
         ));
 
-        $this->command->info("Datos agregados correctamente");
+    $this->command->info("Datos Agregados correctamente");
     }
 }
