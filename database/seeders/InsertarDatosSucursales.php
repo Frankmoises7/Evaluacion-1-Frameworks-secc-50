@@ -15,16 +15,23 @@ class InsertarDatosSucursales extends Seeder
     public function run()
     {
         //
-        DB::table('sucursales')->insert(array(
+        DB::table('sucursales')-> insert(array(
             [
-                'nombre' => 'Almacen 1',
-                'direccion' => 'Direccion 1',
-                'region_id' => 1
+                'nombre' => 'Sucursal Santiago',
+                'direccion' => 'Alameda 123',              
+                'region_id' => 1,
             ],
+    
             [
-                'nombre' => 'Almacen 2',
-                'direccion' => 'Direccion 2',
-                'region_id' => 2
+                'nombre' => 'Sucursal Arica',
+                'direccion' => 'Norte 1234',              
+                'region_id' => 5,
+            ],
+    
+            [
+                'nombre' => 'Sucursal Punta Arenas',
+                'direccion' => 'Helado 1234',              
+                'region_id' => 9,
             ],
         ));
     }
