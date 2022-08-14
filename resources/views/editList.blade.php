@@ -3,7 +3,7 @@
 @section('content')
     <?php
     //Arrays de información de productos en duro que serán tomadas de la base de datos
-    $productos = [
+    $articulos = [
         [
             'nombre' => 'Lápiz',
             'stock' => 300,
@@ -50,7 +50,7 @@
 
     ?>
     <div class="container flex-column">
-        <h2 class="table-title">Stock de Productos</h2>
+        <h2 class="table-title">Stock de Artículos</h2>
         <table class="table">
             <thead>
                 <tr class="table-info">
@@ -58,23 +58,21 @@
                     <th scope="col">NOMBRE</th>
                     <th scope="col">STOCK</th>
                     <th scope="col">SUCURSAL</th>
-                    <th scope="col">MENOS</th>
-                    <th scope="col">MÁS</th>
+                    <th scope="col">ACTUALIZAR</th>
                     <th scope="col">DAR DE BAJA</th>
                 </tr>
             </thead>
             <?php
         $id = 1;
-        foreach ($productos as $p) {
+        foreach ($articulos as $a) {
         ?>
             <tbody>
                 <tr class="table-light">
                     <th scope="row"> <?php echo $id; ?> </th>
-                    <td><?php echo $p['nombre']; ?></td>
-                    <td><?php echo $p['stock']; ?></td>
-                    <td><?php echo $p['sucursal']; ?></td>
-                    <td><button type="button" class="btn btn-danger">-</button></td>
-                    <td><button type="button" class="btn btn-primary">+</button></td>
+                    <td><?php echo $a['nombre']; ?></td>
+                    <td><?php echo $a['stock']; ?></td>
+                    <td><?php echo $a['sucursal']; ?></td>                  
+                    <td><button type="button" class="btn btn-success btn-lg">Modificar</button></td>
                     <td><button type="button" class="btn btn-info"><a href="{{url('/delete')}}" class="a-link">ELIMINAR</a></button></td>
                 </tr>
             </tbody>
@@ -85,8 +83,7 @@
         ?>
         </table>
         <div>
-            <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/list')}}" class="a-link">Regresar</a></button>
-            <button type="button" class="btn btn-success btn-lg">Actualizar</button>
+            <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/list')}}" class="a-link">Regresar</a></button>        
         </div>
 
     </div>
