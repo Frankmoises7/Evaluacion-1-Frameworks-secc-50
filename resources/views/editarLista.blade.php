@@ -64,14 +64,14 @@
             </thead>
             <?php
         $id = 1;
-        foreach ($articulos as $a) {
+        foreach ($productos as $p) {
         ?>
             <tbody>
                 <tr class="table-light">
                     <th scope="row"> <?php echo $id; ?> </th>
-                    <td><?php echo $a['nombre']; ?></td>
-                    <td><?php echo $a['stock']; ?></td>
-                    <td><?php echo $a['sucursal']; ?></td>
+                    <td>{{$p->articulos->nombre}}</td>
+                    <td>{{$p->stockSucursal}}</td>
+                    <td>{{$p->sucursal_id}}</td>
                     <td><button type="button" class="btn btn-success">Modificar</button></td>
                     <td><button type="button" class="btn btn-danger"><a href="{{url('/borrar')}}" class="a-link">Eliminar</a></button></td>
                 </tr>

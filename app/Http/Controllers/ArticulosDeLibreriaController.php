@@ -33,7 +33,13 @@ class ArticulosDeLibreriaController extends Controller
     }
 
     public function editarLista() {
-        return view('editarLista');
+        $productos = AsignarArticulo::get()
+        //Aqui hacemos la relacion con los articulos para obtener elnombre
+        ->load('articulos');
+        
+        return view('editarLista', [
+            'productos'=> $productos
+        ]);
     }
 
     public function asignarAr() {
