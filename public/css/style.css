@@ -82,10 +82,9 @@ html {
 
 a:link, a:visited,  a:hover, a:active {
     text-decoration: none;
-    color: #1a4878;
-    font-weight: 700
+    color: #cbf4f6;
+    font-weight: 600;
 }
-
 
 .footer {
     padding: 10px;
@@ -102,3 +101,13 @@ a:link, a:visited,  a:hover, a:active {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.btnColor {
+    background-color: #afcde3;
+    border: 2px solid #556980;
+    border-radius: 5px;
+    padding: 7px;
+    width: 100px;
+}
+
+

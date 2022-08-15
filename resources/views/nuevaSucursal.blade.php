@@ -8,13 +8,13 @@
                     <div class="form-group">
                         <label for="full_name_id" class="control-label">Nombre</label>
                         <input type="text" class="form-control" id="nameOffice" name="nameOffice" placeholder="Sucursal Santiago">
-                    </div>    
-                    <div class="form-group"> 
+                    </div>
+                    <div class="form-group">
                         <label for="street1_id" class="control-label">Dirección</label>
                     <input type="text" class="form-control" id="address" name="address" placeholder="Calle falsa">
-                    </div> 
+                    </div>
 
-                    <div class="form-group"> 
+                    <div class="form-group">
                     <label for="region" class="control-label">Región</label>
                     <select class="form-control" id="region">
                         <option value="15">Arica y Parinacota</option>
@@ -31,14 +31,14 @@
                         <option value="14">Los Ríos</option>
                         <option value="10">Los Lagos</option>
                         <option value="11">Aysén del General Carlos Ibáñez del Campo</option>
-                        <option value="12">Magallanes y de la Antártica Chilena</option>          
-                        <option value="16">Ñuble</option>          
-                    </select>                    
+                        <option value="12">Magallanes y de la Antártica Chilena</option>
+                        <option value="16">Ñuble</option>
+                    </select>
                 </div>
 
                 </table>
                 <div>
-                    <button type="submit" class="btn btn-primary btn-lg boton__agregar__newoffice">Agregar</button>
+                    <button type="submit" class="btnColor boton__agregar__newoffice">Agregar</button>
                 </div>
 
                 @if($errors->any())
