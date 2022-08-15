@@ -71,9 +71,9 @@
                     <th scope="row"> <?php echo $id; ?> </th>
                     <td><?php echo $a['nombre']; ?></td>
                     <td><?php echo $a['stock']; ?></td>
-                    <td><?php echo $a['sucursal']; ?></td>                  
-                    <td><button type="button" class="btn btn-success btn-lg">Modificar</button></td>
-                    <td><button type="button" class="btn btn-info"><a href="{{url('/borrar')}}" class="a-link">ELIMINAR</a></button></td>
+                    <td><?php echo $a['sucursal']; ?></td>
+                    <td><button type="button" class="btn btn-success">Modificar</button></td>
+                    <td><button type="button" class="btn btn-danger"><a href="{{url('/borrar')}}" class="a-link">Eliminar</a></button></td>
                 </tr>
             </tbody>
 
@@ -83,7 +83,7 @@
         ?>
         </table>
         <div>
-            <button type="button" class="btn btn-secondary btn-lg"><a href="lista">Regresar</a></button>        
+            <button type="button" class="btn btn-secondary btn-lg"><a href="lista">Regresar</a></button>
         </div>
 
     </div>
