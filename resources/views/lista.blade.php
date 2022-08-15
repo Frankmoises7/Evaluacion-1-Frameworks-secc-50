@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
- 
+
 
     <div class="container flex-column">
         <h2 class="table-title">Listado de Productos asignados a sucursales</h2>
@@ -22,7 +22,7 @@
             <tbody>
                 <tr class="table-light">
                     <th scope="row"> <?php echo $id; ?> </th>
-                    <td>{{$p->articulo_id}}</td>
+                    <td>{{$p->articulos->nombre}}</td>
                     <td>{{$p->stockSucursal}}</td>
                     <td>{{$p->precio}}</td>
                     <td>{{$p->sucursal_id}}</td>

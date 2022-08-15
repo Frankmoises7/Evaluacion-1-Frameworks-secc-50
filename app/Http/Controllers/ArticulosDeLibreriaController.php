@@ -12,17 +12,19 @@ use App\Models\Sucursal;
 class ArticulosDeLibreriaController extends Controller
 {
     public function welcome(){
-       return view('welcome');
+        return view('welcome');
        //$asignarArticulos = AsignarArticulo::get();
 
        //dd($asignarArticulos);
     }
     
     public function verlista(){
-        $productos = AsignarArticulo::get();
+        $productos = AsignarArticulo::get()
+        //Aqui hacemos la relacion con los articulos para obtener elnombre
+        ->load('articulos');
         
         return view('lista', [
-         'productos'=> $productos
+            'productos'=> $productos
         ]);
     }
 
