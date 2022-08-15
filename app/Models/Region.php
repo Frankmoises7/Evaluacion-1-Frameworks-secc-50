@@ -11,7 +11,7 @@ class Region extends Model
     protected $primaryKey = 'id';
     protected $table = 'regiones';
 
-    public function assignItems(){
-        return $this->hasMany('App\Models\sucursal');
+    public function sucursales(){
+        return $this->hasMany('App\Models\Sucursales');
     }
 }

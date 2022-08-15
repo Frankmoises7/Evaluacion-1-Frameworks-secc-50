@@ -8,10 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Articulo extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'id';
+    protected $table = 'articulos';
+
     public function categorias(){
-        return $this->belongsTo('App\Models\item', 'categoria_id');       
+        return $this->belongsTo('App\Models\Categoria', 'categoria_id');       
     }
-    public function asignarArticulos(){
-        return $this->hasMany('App\Models\asignarArticulo');
+    public function asignacionArticulos(){
+        return $this->hasMany('App\Models\AsignacionArticulo');
     }
+
 }

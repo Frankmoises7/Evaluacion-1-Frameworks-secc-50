@@ -11,10 +11,10 @@ class Sucursal extends Model
     protected $primaryKey = 'id';
     protected $table = 'sucursales';
 
-    public function asignarArticulos(){
-        return $this->hasMany('App\Models\AsignarArticulo');
+    public function asignacionArticulos(){
+        return $this->hasMany('App\Models\AsignacionArticulos');
     }
     public function regiones(){
-        return $this->belongsTo('App\Models\office', 'regiones_id');       
+        return $this->belongsTo('App\Models\Region', 'region_id');
     }
 }

@@ -12,9 +12,9 @@ class AsignarArticulo extends Model
     protected $table = 'asignarArticulos';
 
     public function articulos(){
-        return $this->belongsTo('App\Models\item', 'articulo_id');       
+        return $this->belongsTo('App\Models\Articulo', 'articulo_id');       
     }
     public function sucursales(){
-        return $this->belongsTo('App\Models\office', 'sucursal_id');       
+        return $this->belongsTo('App\Models\Sucursal', 'sucursal_id');       
     }
 }
