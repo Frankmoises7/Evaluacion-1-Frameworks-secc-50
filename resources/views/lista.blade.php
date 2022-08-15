@@ -9,23 +9,23 @@
             <thead>
                 <tr class="table-info">
                     <th scope="col">ID</th>
+                    <th scope="col">CODIGO</th>
                     <th scope="col">NOMBRE</th>
-                    <th scope="col">STOCK</th>
-                    <th scope="col">PRECIO EN PESOS</th>
                     <th scope="col">SUCURSAL</th>
+                    <th scope="col">CATEGORIA</th>
                 </tr>
             </thead>
             <?php
         $id = 1;
-        foreach ($productos as $p) {
+        foreach ($articulos as $a) {
         ?>
             <tbody>
                 <tr class="table-light">
                     <th scope="row"> <?php echo $id; ?> </th>
-                    <td>{{$p->articulos->nombre}}</td>
-                    <td>{{$p->stockSucursal}}</td>
-                    <td>{{$p->precio}}</td>
-                    <td>{{$p->sucursal_id}}</td>
+                    <td>{{$a->codigo}}</td>
+                    <td>{{$a->nombre}}</td>
+                    <td>{{$a->sucursal}}</td>
+                    <td>{{$a->categoria_id}}</td>
                 </tr>
             </tbody>
 

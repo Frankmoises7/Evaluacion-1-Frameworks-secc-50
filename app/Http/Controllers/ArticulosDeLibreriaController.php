@@ -19,12 +19,12 @@ class ArticulosDeLibreriaController extends Controller
     }
     
     public function verlista(){
-        $productos = AsignarArticulo::get()
+        $articulos = Articulo::get();
         //Aqui hacemos la relacion con los articulos para obtener elnombre
-        ->load('articulos');
+        
         
         return view('lista', [
-            'productos'=> $productos
+            'articulos'=> $articulos
         ]);
     }
 
@@ -67,10 +67,25 @@ class ArticulosDeLibreriaController extends Controller
     public function guardarItem(Request $request) {
         
         $this->validate($request,[
-            'item' => 'required|min:3',
-            'stock' => 'required|integer'
+            'codigo' => 'required',
+            'nombre' => 'required',
+            'stock' => 'required',
+            'categoria_id' => 'required'
         ]);
-        return "Nombre del articulo: ". $request->input("item"). ", Cantidad del articulo: ". $request->input("stock"). ", Categoria: ". $request->input("category");
+        $articulo = new Articulo();
+        $articulo -> codigo = $request -> codigo;
+        $articulo -> nombre = $request -> nombre;
+        $articulo -> stock = $request -> stock;
+        $articulo -> categoria_id = $request -> categoria_id;
+        $articulo -> descripcion = $request -> descripcion;
+        $articulo -> sucursal = $request -> sucursal;
+        $articulo -> save();
+
+        $articulo = Articulo::get();
+
+        return view('lista', [
+            'articulos'=> $articulo
+        ]);
     }
 
     public function guardarOffice(Request $request) {

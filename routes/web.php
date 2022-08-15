@@ -21,7 +21,7 @@ Route::get('/nuevoArticulo', 'App\Http\Controllers\ArticulosDeLibreriaController
 Route::get('/nuevaSucursal', 'App\Http\Controllers\ArticulosDeLibreriaController@nuevaSu');
 
 Route::post('/listGuardar', 'App\Http\Controllers\ArticulosDeLibreriaController@guardar');
-Route::post('/guardarIt', 'App\Http\Controllers\ArticulosDeLibreriaController@guardarItem');
+Route::post('/guardarItem', 'App\Http\Controllers\ArticulosDeLibreriaController@guardarItem');
 Route::post('/guardarOf', 'App\Http\Controllers\ArticulosDeLibreriaController@guardarOffice');
 
 //Para mostrar la vista DELETE (se modificara el metodo en proximas actualizaciones)

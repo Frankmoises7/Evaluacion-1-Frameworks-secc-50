@@ -22,7 +22,8 @@ class InsertarDatosArticulos extends Seeder
                 'nombre' => 'Lápiz Mina',
                 'categoria_id' => 1,
                 'stock' => 10000,                  
-                'descripcion' => 'Lápiz de grafito hecho por esclavos enanos en las montañas'
+                'descripcion' => 'Lápiz de grafito hecho por esclavos enanos en las montañas',
+                'sucursal' => 1
             ],
     
             [
@@ -30,7 +31,8 @@ class InsertarDatosArticulos extends Seeder
                 'nombre' => 'Cuaderno universitario',
                 'category_id' => 1,
                 'stock' => 10000,                  
-                'descripcion' => 'Cuaderno de 100 hojas con un macaco en la portada'
+                'descripcion' => 'Cuaderno de 100 hojas con un macaco en la portada',
+                'sucursal' => 2
             ],
     
             [
@@ -38,42 +40,48 @@ class InsertarDatosArticulos extends Seeder
                 'nombre' => 'Corrector',
                 'categoria_id' => 1,
                 'stock' => 9000,                  
-                'descripcion' => 'Lápiz corrector de equivocaciones, no puedes corregirte con él'
+                'descripcion' => 'Lápiz corrector de equivocaciones, no puedes corregirte con él',
+                'sucursal' => 3
             ],
             [
                 'codigo' => '4',
                 'nombre' => 'Marcadores Multicolores',
                 'categoria_id' => 1,
                 'stock' => 10000,                  
-                'descripcion' => 'Marcadores de 3cm x 10 cm de muchos colores'
+                'descripcion' => 'Marcadores de 3cm x 10 cm de muchos colores',
+                'sucursal' => 1
             ],
             [
                 'codigo' => '5',
                 'nombre' => 'Cola Fría',
                 'categoria_id' => 2,
                 'stock' => 8000,                  
-                'descripcion' => 'Pegamento para maderas, papel y huesos'
+                'descripcion' => 'Pegamento para maderas, papel y huesos',
+                'sucursal' => 2
             ],
             [
                 'codigo' => '6',
                 'nombre' => 'Tijeras',
                 'categoria_id' => 1,
                 'stock' => 7000,                  
-                'descripcion' => 'Tijeras sin filo, para preescolar'
+                'descripcion' => 'Tijeras sin filo, para preescolar',
+                'sucursal' => 3
             ],
             [
                 'codigo' => '7',
                 'nombre' => 'Cartulina',
                 'categoria_id' => 3,
                 'stock' => 7000,                  
-                'descripcion' => 'Cartulinas vario color para disertaciones a última hora'
+                'descripcion' => 'Cartulinas vario color para disertaciones a última hora',
+                'sucursal' => 1
             ],
             [
                 'codigo' => '8',
                 'nombre' => 'Témpera',
                 'categoria_id' => 4,
                 'stock' => 5000,                  
-                'descripcion' => 'Temperas de 12 colores, si las mezclas creas el mejor color'
+                'descripcion' => 'Temperas de 12 colores, si las mezclas creas el mejor color',
+                'sucursal' => 3
             ],
         ));
 

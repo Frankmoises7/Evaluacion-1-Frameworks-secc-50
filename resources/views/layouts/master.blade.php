@@ -13,7 +13,7 @@
 <body>
     @section('header')
         <div class="header">
-            <a href="{{url('/list')}}">
+            <a href="{{url('/lista')}}">
                 <h2 class="header-title">Libreria</h2>
             </a>
         </div>
