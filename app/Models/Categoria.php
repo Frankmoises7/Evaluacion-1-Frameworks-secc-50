@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Regiones extends Model
+class Categoria extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id';
-    protected $table = 'regiones';
+    protected $table = 'categorias';
 
-    public function assignItems(){
-        return $this->hasMany('App\Models\sucursales');
+    public function articulos(){
+        return $this->belongsTo('App\Models\Articulo', 'articulo_id');
     }
 }

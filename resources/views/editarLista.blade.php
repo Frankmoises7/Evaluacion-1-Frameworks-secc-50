@@ -83,7 +83,7 @@
         ?>
         </table>
         <div>
-            <button type="button" class="btn btn-secondary btn-lg"><a href="{{url('/lista')}}" class="a-link">Regresar</a></button>        
+            <button type="button" class="btn btn-secondary btn-lg"><a href="lista">Regresar</a></button>        
         </div>
 
     </div>

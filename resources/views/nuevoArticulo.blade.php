@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </td>
-                
+
             </table>
             <div>
                 <button type="submit" class="btnColor">Agregar</button>
