@@ -3,23 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Articulos;
-use App\Models\AsignarArticulos;
-use App\Models\Categorias;
-use App\Models\Regiones;
-use App\Models\Sucursales;
+use App\Models\Articulo;
+use App\Models\AsignarArticulo;
+use App\Models\Categoria;
+use App\Models\Region;
+use App\Models\Sucursal;
 
 class ArticulosDeLibreriaController extends Controller
 {
     public function welcome(){
        return view('welcome');
-       //$articulos = Articulos::get();
+       //$asignarArticulos = AsignarArticulo::get();
 
-       //dd($articulos);
+       //dd($asignarArticulos);
     }
     
     public function verlista(){
-        return view('lista');
+        $productos = AsignarArticulo::get();
+        
+        return view('lista', [
+         'productos'=> $productos
+        ]);
     }
 
     public function verborrar(){
