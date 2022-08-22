@@ -3,27 +3,25 @@
 @section('content')
     <div class="add-element">
         <h2 class="table-title">Asignar Artículo a Sucursal</h2>
-        <form method="POST" action="{{ url('/listGuardar') }}">
+        <form method="POST" action="{{ url('/guardarAsignacion') }}">
             <table>
                 <td class="input-group mb-3">
 
-                        <span class="input-group-text">Sucursal</span>
-                        <select class="form-select" id="sucursal" name="sucursal">
-                            <option selected>Selecciona sucursal</option>
-                            <option value="Arica">Arica</option>
-                            <option value="Santiago">Santiago</option>
-                            <option value="Punta Arenas">Punta Arenas</option>
-                        </select>
+                    <span class="input-group-text">Sucursal</span>
+                    <select name="sucursalA"> id="sucursalA" class="form-control">
+                    @foreach ($sucursales as $su){
+                        <option value="{{ $su->id }}">{{ $su->nombre}} </option>
+                        @endforeach
+                    </select>
 
                 </td>
                 <td class="input-group mb-3">
-                        <span class="input-group-text">Artículo</span>
-                        <select class="form-select" id="articulo" name="articulo">
-                            <option selected>Selecciona artículo</option>
-                            <option value="lapiz">Lápiz</option>
-                            <option value="goma">Goma</option>
-                            <option value="cuaderno">Cuaderno</option>
-                        </select>
+                <span class="input-group-text">Artículo</span>
+                    <select name="articuloA"> id="articuloA" class="form-control">
+                    @foreach ($articulos as $ar){
+                        <option value="{{ $ar->id }}">{{ $ar->nombre}} </option>
+                        @endforeach
+                    </select>
                 </td>
                 <td class="input-group mb-3">
                         <span class="input-group-text">Cantidad</span>

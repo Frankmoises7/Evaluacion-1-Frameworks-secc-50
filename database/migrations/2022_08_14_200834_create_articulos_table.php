@@ -20,7 +20,6 @@ class CreateArticulosTable extends Migration
             $table->integer('stock');
             $table->foreignId('categoria_id')->references ('id') -> on ('categorias');
             $table->string('descripcion', 200);
-            $table->integer('sucursal');
             $table->timestamps();
         });
     }
