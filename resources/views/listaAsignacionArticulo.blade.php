@@ -5,30 +5,28 @@
 
 
     <div class="container flex-column">
-        <h2 class="table-title">Listado de Productos</h2>
+        <h2 class="table-title">Listado de Productos asignados a sucursales</h2>
         <table class="table">
             <thead>
                 <tr class="table-info">
                     <th scope="col">ID</th>
-                    <th scope="col">CODIGO</th>
-                    <th scope="col">NOMBRE</th>
-                    <th scope="col">STOCK</th>
-                    <th scope="col">CATEGORIA</th>
-                    <th scope="col">DESCRIPCIÓN</th>
+                    <th scope="col">ARTÍCULO</th>
+                    <th scope="col">SUCURSAL</th>
+                    <th scope="col">STOCK DE LA SUCURSAL</th>
+                    <th scope="col">PRECIO</th>
                 </tr>
             </thead>
             <?php
         $id = 1;
-        foreach ($articulos as $a) {
+        foreach ($asignaciones as $asi) {
         ?>
             <tbody>
                 <tr class="table-light">
-                    <td>{{$a->id}}</td>
-                    <td>{{$a->codigo}}</td>
-                    <td>{{$a->nombre}}</td>
-                    <td>{{$a->stock}}</td>                  
-                    <td>{{$a->categoria_id}}</td>
-                    <td>{{$a->descripcion}}</td>
+                    <td>{{$asi->id}}</td>
+                    <td>{{$asi->articulo_id}}</td>
+                    <td>{{$asi->sucursal_id}}</td>
+                    <td>{{$asi->stockSucursal}}</td>                  
+                    <td>{{$asi->precio}}</td>
                 </tr>
             </tbody>
 
@@ -38,13 +36,6 @@
         ?>
         </table>
 
-        <form method="POST" action="{{ url('/buscarArt') }}">
-  <div class="mb-3">
-    <label for="busqueda" class="form-label">Busqueda productos</label>
-    <input type="text" name="busqueda"> <br>
-    <imput type="submit" name="enviar" value="buscar">
-</form>
-
         <div class="d-grid gap-2 d-md-block">
         <button type="button" class="btn btn-secondary btn-lg"><a href="asignarArticulo">Asignar un artículo a sucursal</a></button>
         <button type="button" class="btn btn-secondary btn-lg"><a href="editarLista">Actualizar Productos</a></button>
@@ -52,6 +43,5 @@
         <button type="button" class="btn btn-secondary btn-lg"><a href="nuevaSucursal">Agregar nueva Sucursal</a></button>
         
 </div>
-
     </div>
 @stop
