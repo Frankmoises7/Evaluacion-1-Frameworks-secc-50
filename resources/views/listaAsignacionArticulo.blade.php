@@ -23,8 +23,8 @@
             <tbody>
                 <tr class="table-light">
                     <td>{{$asi->id}}</td>
-                    <td>{{$asi->articulo_id}}</td>
-                    <td>{{$asi->sucursal_id}}</td>
+                    <td>{{$asi->articulos->nombre}}</td>
+                    <td>{{$asi->sucursales->nombre}}</td>
                     <td>{{$asi->stockSucursal}}</td>                  
                     <td>{{$asi->precio}}</td>
                 </tr>
