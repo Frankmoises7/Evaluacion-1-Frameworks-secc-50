@@ -23,7 +23,7 @@
                     <th scope="row"> <?php echo $id; ?> </th>
                     <td>{{$su->nombre}}</td>
                     <td>{{$su->direccion}}</td>
-                    <td>{{$su->region_id}}</td>
+                    <td>{{$su->regiones->nombre}}</td>
                 </tr>
             </tbody>
 
