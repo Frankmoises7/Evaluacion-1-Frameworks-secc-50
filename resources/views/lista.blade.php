@@ -27,7 +27,7 @@
                     <td>{{$a->codigo}}</td>
                     <td>{{$a->nombre}}</td>
                     <td>{{$a->stock}}</td>                  
-                    <td>{{$a->categoria_id}}</td>
+                    <td>{{$a->categorias->nombre}}</td>
                     <td>{{$a->descripcion}}</td>
                 </tr>
             </tbody>
