@@ -21,11 +21,12 @@ Route::get('/nuevoArticulo', 'App\Http\Controllers\ArticulosController@nuevoAr')
 Route::get('/nuevaSucursal', 'App\Http\Controllers\SucursalesController@nuevaSu');
 Route::get('/listaSucursal', 'App\Http\Controllers\SucursalesController@versucursal');
 Route::get('/listaAsignacionArticulo', 'App\Http\Controllers\ArticulosController@verasignacion');
-
+Route::get('miniatura/{filename}', 'App\Http\Controllers\ArticulosController@getImagen');
 
 Route::post('/guardarAsignacion', 'App\Http\Controllers\ArticulosController@guardarAsignacion');
 Route::post('/guardarArticulo', 'App\Http\Controllers\ArticulosController@guardarArticulo');
 Route::post('/guardarSu', 'App\Http\Controllers\SucursalesController@guardarSucursal');
+
 Route::post('/buscarArt', 'App\Http\Controllers\ArticulosController@verbusqueda');
 
 

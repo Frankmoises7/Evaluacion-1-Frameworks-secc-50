@@ -23,7 +23,7 @@
                     <th scope="row"> <?php echo $id; ?> </th>
                     <td>{{$su->nombre}}</td>
                     <td>{{$su->direccion}}</td>
-                    <td>{{$su->region_id}}</td>
+                    <td>{{$su->regiones->nombre}}</td>
                 </tr>
             </tbody>
 
@@ -32,11 +32,6 @@
         }
         ?>
         </table>
-
-        <div class="d-grid gap-2 d-md-block">
-        <button type="button" class="btn btn-secondary btn-lg"><a href="listaAsignacionArticulo">Ir a Lista de de asignaciones</a></button>
-        
-</div>
 
     </div>
 @stop

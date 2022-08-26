@@ -21,6 +21,7 @@ class ArticulosDeLibreriaController extends Controller
     public function verlista(){
         $articulos = Articulo::get();
         //Aqui hacemos la relacion con los articulos para obtener elnombre
+        //dd($articulos);
         return view('lista', [
             'articulos'=> $articulos
         ]);

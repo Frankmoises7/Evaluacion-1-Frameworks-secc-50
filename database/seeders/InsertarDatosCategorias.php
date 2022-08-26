@@ -28,6 +28,12 @@ class InsertarDatosCategorias extends Seeder
             [
                 'nombre' => 'Papelería',
             ],
+            [
+                'nombre' => 'Cortantes',
+            ],
+            [
+                'nombre' => 'Pinturas',
+            ],
             ));
             $this->command->info("Datos Agregados correctamente");
     }

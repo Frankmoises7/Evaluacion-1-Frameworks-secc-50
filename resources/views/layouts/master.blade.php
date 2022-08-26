@@ -17,6 +17,44 @@
                 <h2 class="header-title">Libreria</h2>
             </a>
         </div>
+
+        <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="asignarArticulo">Asignar Artículo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="nuevoArticulo">Registrar Artículo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="nuevaSucursal">Registrar Sucursal</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Listas
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="listaAsignacionArticulo">Lista Producto-Sucursal</a></li>
+            <li><a class="dropdown-item" href="lista">Lista de Artículos</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="ListaSucursales">Lista de Sucursales</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search" method="POST" action="/buscarArt">
+        <input class="form-control me-2" type="text" placeholder="Busqueda" name= "busqueda" aria-label="Search">
+        <button class="btn btn-outline-success" value=busqueda type="submit">Busqueda</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
     @show
 
     <div class="container">
