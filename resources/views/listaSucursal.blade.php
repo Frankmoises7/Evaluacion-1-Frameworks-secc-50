@@ -33,10 +33,5 @@
         ?>
         </table>
 
-        <div class="d-grid gap-2 d-md-block">
-        <button type="button" class="btn btn-secondary btn-lg"><a href="listaAsignacionArticulo">Ir a Lista de de asignaciones</a></button>
-        
-</div>
-
     </div>
 @stop

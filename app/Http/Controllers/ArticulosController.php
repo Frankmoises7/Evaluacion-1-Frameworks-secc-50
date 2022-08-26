@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Models\Articulo;
 use App\Models\AsignarArticulo;
 use App\Models\Categoria;
@@ -61,8 +62,10 @@ class ArticulosController extends Controller
     }
 
     public function verbusqueda(Request $request) {
+
         //$request="Lápiz";
-        $articulos = Articulo::where('id','LIKE','%'.$request."%")->get();
+    
+        $articulos = Articulo::where('nombre','LIKE','%'.$request."%$busqueda%")->get();
         //dd($articulos);
         return view('lista', [
             'articulos'=> $articulos
@@ -74,18 +77,25 @@ class ArticulosController extends Controller
         $this->validate($request,[
             'codigo' => 'required',
             'nombre' => 'required',
-            'stock' => 'required',
-            'descripcion' => 'required'
+            'descripcion' => 'required',
+            'imagen' => 'required'
         ]);
+
+        $imagen =$request->file('imagen');
+
+        if($imagen){
+            $imagen_path = time()."-".$imagen->getClientOriginalName();
+            \Storage::disk('images')->put($imagen_path, \File::get($imagen));
+        }
 
         $categoria_id = $request->input('categoria');
 
         $articulo = new Articulo();
         $articulo -> codigo = $request -> codigo;
         $articulo -> nombre = $request -> nombre;
-        $articulo -> stock = $request -> stock;
         $articulo -> categoria_id = $categoria_id;
         $articulo -> descripcion = $request -> descripcion;
+        $articulo -> image = $imagen_path;
         $articulo -> save();
 
         $articulo = Articulo::get();
@@ -93,6 +103,11 @@ class ArticulosController extends Controller
         return view('lista', [
             'articulos'=> $articulo
         ]);
+    }
+
+    public function getImagen($filename){
+        $file = \Storage::disk('images')->get($filename);
+        return new Response($file, 200);
     }
 
 }
