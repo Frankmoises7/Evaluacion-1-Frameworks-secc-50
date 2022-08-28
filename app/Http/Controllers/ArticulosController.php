@@ -137,4 +137,5 @@ class ArticulosController extends Controller
             'descripcion'=>'required'
         ]);
 
+    }
 }
