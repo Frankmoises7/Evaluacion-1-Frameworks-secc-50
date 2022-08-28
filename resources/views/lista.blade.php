@@ -3,16 +3,20 @@
 @section('content')
 
 
+
     <div class="container flex-column">
-        <h2 class="table-title">Listado de Productos asignados a sucursales</h2>
+        <h2 class="table-title">Listado de Productos</h2>
         <table class="table">
             <thead>
                 <tr class="table-info">
                     <th scope="col">ID</th>
                     <th scope="col">CODIGO</th>
                     <th scope="col">NOMBRE</th>
-                    <th scope="col">SUCURSAL</th>
                     <th scope="col">CATEGORIA</th>
+                    <th scope="col">DESCRIPCIÓN</th>
+                    <th scope="col">IMAGEN REFERENCIA</th>
+                    <th scope="col">EDITAR</th>
+                    <th scope="col">ELIMINAR</th>
                 </tr>
             </thead>
             <?php
@@ -21,11 +25,20 @@
         ?>
             <tbody>
                 <tr class="table-light">
-                    <th scope="row"> <?php echo $id; ?> </th>
+                    <td>{{$a->id}}</td>
                     <td>{{$a->codigo}}</td>
-                    <td>{{$a->nombre}}</td>
-                    <td>{{$a->sucursal}}</td>
-                    <td>{{$a->categoria_id}}</td>
+                    <td>{{$a->nombre}}</td>                  
+                    <td>{{$a->categorias->nombre}}</td>
+                    <td>{{$a->descripcion}}</td>
+                    <td>
+                    @if(Storage::disk('images')->has($a->image))
+                    <img src="{{ url('miniatura/'. $a->image) }}" class="img-thumbnail" alt="..." width="50" height="50">
+                    @else
+                    <img src="{{$a->image}}" class="img-thumbnail" alt="..." width="50" height="50">
+                    @endif
+                    <td><button class="btn btn-warning" value=editar> <a href="#">Editar</a></button></td>
+                    <td><button class="btn btn-danger" value=eliminar> <a href="/deleteArt/{{$a->id}}">Eliminar</a></button></td>
+                    </td>
                 </tr>
             </tbody>
 
@@ -34,14 +47,6 @@
         }
         ?>
         </table>
-
-        <div class="d-grid gap-2 d-md-block">
-        <button type="button" class="btn btn-secondary btn-lg"><a href="asignarArticulo">Asignar un artículo a sucursal</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a href="editarLista">Actualizar Productos</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a href="nuevoArticulo">Agregar nuevo artículo</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a href="nuevaSucursal">Agregar nueva Sucursal</a></button>
-        
-</div>
 
     </div>
 @stop
