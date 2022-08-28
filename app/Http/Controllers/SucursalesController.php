@@ -13,7 +13,7 @@ class SucursalesController extends Controller{
 
     public function versucursal(){
         $sucursales = Sucursal::get();
-     
+    
         return view('listaSucursal', [
             'sucursales'=> $sucursales
         ]);
@@ -45,6 +45,17 @@ class SucursalesController extends Controller{
 
         $sucursal = Sucursal::get();
 
+        return view('listaSucursal', [
+            'sucursales'=> $sucursal
+        ]);
+    }
+
+    public function delete($id) {
+        
+        $sucursalEliminar = Sucursal::find($id);
+        $sucursalEliminar -> delete();
+
+        $sucursal = Sucursal::get();
         return view('listaSucursal', [
             'sucursales'=> $sucursal
         ]);
