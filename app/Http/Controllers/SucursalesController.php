@@ -61,4 +61,10 @@ class SucursalesController extends Controller{
         ]);
     }
 
+    public function update($id) {
+        
+        $sucursalUpdate = Sucursal::where('id', $id)->get();
+        $sucursalUpdate -> update();
+    }
+
 }

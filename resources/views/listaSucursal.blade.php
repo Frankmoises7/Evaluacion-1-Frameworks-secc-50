@@ -12,7 +12,6 @@
                     <th scope="col">NOMBRE</th>
                     <th scope="col">DIRECCIÓN</th>
                     <th scope="col">REGIÓN</th>
-                    <th scope="col">EDITAR</th>
                     <th scope="col">ELIMINAR</th>
                 </tr>
             </thead>
@@ -26,7 +25,6 @@
                     <td>{{$su->nombre}}</td>
                     <td>{{$su->direccion}}</td>
                     <td>{{$su->regiones->nombre}}</td>
-                    <td><button class="btn btn-warning" value=editar> <a href="#">Editar</a></button></td>
                     <td><button class="btn btn-danger" value=eliminar> <a href="/deleteSuc/{{$su->id}}">Eliminar</a></button></td>
                 </tr>
             </tbody>

@@ -1,90 +1,49 @@
 @extends('layouts.master')
 
 @section('content')
-    <?php
-    //Arrays de información de productos en duro que serán tomadas de la base de datos
-    $articulos = [
-        [
-            'nombre' => 'Lápiz',
-            'stock' => 300,
-            'sucursal' => 'Arica',
-        ],
+    <div class="add-element">
+        <h2 class="table-title">Editar Artículo</h2>
+        <form method="POST" action="/lista" enctype="multipart/form-data">
+            <table class="i">
+                <td class="input-group mb-3">
+                    <span class="input-group-text">Nombre producto</span>
+                    <input type="hidden" class="form-control" id="nombre" name="nombre" value="{{$a[0]->id}}">
+                    <input type="text" class="form-control" id="nombre" name="nombre" value="{{$a[0]->nombre}}">
+                </td>
 
-        [
-            'nombre' => 'Cuaderno',
-            'stock' => 100,
-            'sucursal' => 'Santiago',
-        ],
+                <td class="input-group mb-3">
+                    <span class="input-group-text">Categoría</span>
+                    <select name="categoria"> id="categoria" class="form-control">
+                    @foreach ($categorias as $c){
+                        <option value="{{ $c->id }}">{{ $c->nombre}} </option>
+                        @endforeach
+                    </select>
 
-        [
-            'nombre' => 'Tijeras',
-            'stock' => 200,
-            'sucursal' => 'Punta Arenas',
-        ],
-        [
-            'nombre' => 'Cartulina',
-            'stock' => 400,
-            'sucursal' => 'Santiago',
-        ],
-        [
-            'nombre' => 'Destacadores',
-            'stock' => 300,
-            'sucursal' => 'Arica',
-        ],
-        [
-            'nombre' => 'Agendas',
-            'stock' => 100,
-            'sucursal' => 'Punta Arenas',
-        ],
-        [
-            'nombre' => 'Lapiceras',
-            'stock' => 300,
-            'sucursal' => 'Punta Arenas',
-        ],
-        [
-            'nombre' => 'Glitters',
-            'stock' => 50,
-            'sucursal' => 'Arica',
-        ],
-    ];
+                <td class="input-group mb-3">                   
+                    <div class="col-lg-12">
+                        <span class="col-lg-1 col-lg-offset-2 text-center"><i
+                                class="fa fa-pencil-square-o bigicon">Descripción</span>
+                        <div class="col-lg-12 textareaStyle">
+                            <textarea class="form-control" id="descripcion" name="descripcion" value="{{$articulos[0]->descripcion}}"
+                                rows="4"></textarea>
+                        </div>
+                    </div>
+                </td>
+                
+            </table>
+            <div>
+                <button type="submit" class="btnColor">Editar</button>
+            </div>
 
-    ?>
-    <div class="container flex-column">
-        <h2 class="table-title">Stock de Artículos</h2>
-        <table class="table">
-            <thead>
-                <tr class="table-info">
-                    <th scope="col">ID</th>
-                    <th scope="col">NOMBRE</th>
-                    <th scope="col">STOCK</th>
-                    <th scope="col">SUCURSAL</th>
-                    <th scope="col">ACTUALIZAR</th>
-                    <th scope="col">DAR DE BAJA</th>
-                </tr>
-            </thead>
-            <?php
-        $id = 1;
-        foreach ($productos as $p) {
-        ?>
-            <tbody>
-                <tr class="table-light">
-                    <th scope="row"> <?php echo $id; ?> </th>
-                    <td>{{$p->articulos->nombre}}</td>
-                    <td>{{$p->stockSucursal}}</td>
-                    <td>{{$p->sucursal_id}}</td>
-                    <td><button type="button" class="btn btn-success">Modificar</button></td>
-                    <td><button type="button" class="btn btn-danger"><a href="{{url('/borrar')}}" class="a-link">Eliminar</a></button></td>
-                </tr>
-            </tbody>
-
-            <?php
-            $id = $id + 1;
-        }
-        ?>
-        </table>
-        <div>
-            <button type="button" class="btn btn-secondary btn-lg"><a href="lista">Regresar</a></button>
-        </div>
-
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </form>
     </div>
 @stop

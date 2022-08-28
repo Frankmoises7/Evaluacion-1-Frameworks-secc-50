@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\ArticulosDeLibreriaController@welcome');
 Route::get('/lista', 'App\Http\Controllers\ArticulosDeLibreriaController@verlista');
-Route::get('/editarLista', 'App\Http\Controllers\ArticulosDeLibreriaController@editarLista');
+Route::get('/editarLista/{id}', 'App\Http\Controllers\ArticulosDeLibreriaController@editarLista');
 Route::get('/asignarArticulo', 'App\Http\Controllers\ArticulosController@asignarAr');
 Route::get('/nuevoArticulo', 'App\Http\Controllers\ArticulosController@nuevoAr');
 Route::get('/nuevaSucursal', 'App\Http\Controllers\SucursalesController@nuevaSu');
@@ -29,7 +29,9 @@ Route::post('/guardarSu', 'App\Http\Controllers\SucursalesController@guardarSucu
 
 Route::post('/buscarArt', 'App\Http\Controllers\ArticulosController@verbusqueda');
 
-
+//Actualizar Articulos y sucursales
+Route::get('/editArt/{id}', 'App\Http\Controllers\ArticulosController@update');
+Route::get('/editSuc/{id}', 'App\Http\Controllers\SucursalesController@update');
 
 //Para mostrar la vista DELETE (se modificara el metodo en proximas actualizaciones)
 Route::get('/deleteArt/{id}', 'App\Http\Controllers\ArticulosController@delete');

@@ -121,8 +121,20 @@ class ArticulosController extends Controller
         ]);
     }
 
-    public function update() {
+    public function update($id) {
         
+            $articuloUpdate = Articulo::where('id', $id)->get();
+            
+            return view('editarLista', [
+                'articulos'=> $articulos
+            ]);
     }
+
+    public function updateSave(Request $request) {
+        
+        $this->validate($request,[
+            'nombre'=>'required',
+            'descripcion'=>'required'
+        ]);
 
 }

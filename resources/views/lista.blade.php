@@ -36,7 +36,7 @@
                     @else
                     <img src="{{$a->image}}" class="img-thumbnail" alt="..." width="50" height="50">
                     @endif
-                    <td><button class="btn btn-warning" value=editar> <a href="#">Editar</a></button></td>
+                    <td><button class="btn btn-warning" value=editar> <a href="/editArt/{{$a->id}}">Editar</a></button></td>
                     <td><button class="btn btn-danger" value=eliminar> <a href="/deleteArt/{{$a->id}}">Eliminar</a></button></td>
                     </td>
                 </tr>
