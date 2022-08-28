@@ -41,5 +41,5 @@ class ArticulosDeLibreriaController extends Controller
         ]);
     }
 
-
+    
 }

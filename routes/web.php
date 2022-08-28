@@ -32,4 +32,5 @@ Route::post('/buscarArt', 'App\Http\Controllers\ArticulosController@verbusqueda'
 
 
 //Para mostrar la vista DELETE (se modificara el metodo en proximas actualizaciones)
+Route::get('/delete/{id}', 'App\Http\Controllers\ArticulosController@delete');
 Route::get('/borrar', 'App\Http\Controllers\ArticulosDeLibreriaController@verborrar');

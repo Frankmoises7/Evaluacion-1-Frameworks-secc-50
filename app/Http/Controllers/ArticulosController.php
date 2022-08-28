@@ -64,11 +64,11 @@ class ArticulosController extends Controller
     public function verbusqueda(Request $request) {
 
         //$request="Lápiz";
-    
+        $busqueda = $request->input('buscarArt');
         $articulos = Articulo::where('nombre','LIKE','%'.$request."%$busqueda%")->get();
         //dd($articulos);
         return view('lista', [
-            'articulos'=> $articulos
+            'articulos'=> $articulos 
         ]);
     }
 
@@ -108,6 +108,21 @@ class ArticulosController extends Controller
     public function getImagen($filename){
         $file = \Storage::disk('images')->get($filename);
         return new Response($file, 200);
+    }
+
+    public function delete($id) {
+        
+        $articuloEliminar = Articulo::find($id);
+        $articuloEliminar -> delete();
+
+        $articulos = Articulo::get();
+        return view('lista', [
+            'articulos'=> $articulos
+        ]);
+    }
+
+    public function update() {
+        
     }
 
 }

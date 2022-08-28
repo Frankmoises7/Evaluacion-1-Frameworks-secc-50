@@ -15,6 +15,8 @@
                     <th scope="col">CATEGORIA</th>
                     <th scope="col">DESCRIPCIÓN</th>
                     <th scope="col">IMAGEN REFERENCIA</th>
+                    <th scope="col">EDITAR</th>
+                    <th scope="col">ELIMINAR</th>
                 </tr>
             </thead>
             <?php
@@ -34,6 +36,8 @@
                     @else
                     <img src="{{$a->image}}" class="img-thumbnail" alt="..." width="50" height="50">
                     @endif
+                    <td><button class="btn btn-warning" value=editar> <a href="#">Editar</a></button></td>
+                    <td><button class="btn btn-danger" value=editar> <a href="/delete/{{$a->id}}">Eliminar</a></button></td>
                     </td>
                 </tr>
             </tbody>
